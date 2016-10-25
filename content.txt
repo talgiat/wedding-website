@@ -1,0 +1,25 @@
+<!-- ABOUT -->
+      <section class="page" id="about" style="display: none; visibility: visible;">
+        <h2 class="page-title">Welcome</h2>
+        <p class="page-copy">If we had it our way, all of us would be on a pontoon gambling boat this weekend with Dark and Stormy’s in hand, setting sail for 80 degree weather. Since our parent’s have been patiently waiting for a ceremony though, we decided June nuptials on the edge of the world (Montauk feels like earth’s end, no?) would suffice. There are plenty of wish lanterns to be lit and bottles of champagne waiting to be popped – all we need are your lovely faces.</p>
+        <div class="image-container clearfix">
+          <div class="row two-columns-wide">
+            <div class="small-30 columns">
+              <div class="row">
+                <img class="full-size" src="https://d14g54d6bl7gsf.cloudfront.net/62429/9c3d6bec-df42-45bb-b880-c085cbe01cba.jpg" alt="9c3d6bec df42 45bb b880 c085cbe01cba">
+                <h3>The Bride</h3>
+                <hr class="tight">
+                <p class="couple-copy">I was out of the U.S. for the first extended period of time in my life, attending a university summer program in London when I met Grey. We both headed with a large group of classmates to the Glastonbury music festival. I was trying to navigate the crowd at the Fleet Foxes set (who knew folks could get so riled up over folk music?) when my wellies gave way and I slipped in the mud. It really wasn’t a big deal, but then I see this guy from my program whom I had never spoken to (but who often stared at me) bounding over to my rescue. And instead of lending me a hand, he slid right into me like a bowling ball and we both collapsed. My first thought? “This boy needs to do less.” After that? “Oh wait, he’s actually pretty cute.” We laughed, introduced ourselves, and then just sat there in the mud listening to “White Winter Hymnal,” because we had been standing for hours and cleanliness was a lost cause at that point.</p>
+              </div>
+            </div>
+            <div class="small-30 columns">
+              <div class="row">
+                <img class="full-size" src="https://d14g54d6bl7gsf.cloudfront.net/62429/6cfdc573-bf3e-4575-8bfb-ca5277110457.jpg" alt="6cfdc573 bf3e 4575 8bfb ca5277110457">
+                <h3>The Groom</h3>
+                <hr class="tight">
+                <p class="couple-copy">It was a typical mucky English day and a large group of us, including Riley, from our program headed down to Pilton for Glastonbury 2009. To put it in cliché, romantic terms, I was watching Riley through the crowd of concert-goers, trying to figure out how I was going to finally work up the courage to speak to this girl…when she totally ate it. We’re talking facedown, knee-deep in mud. Remember that scene in The Neverending Story with the horse in the quicksand? This was worse. It was really quite pathetic. I walked over to give her a hand and in a frenzy she brought me down with her. Even though it was totally her fault, I found myself mortified. She smiled and I don’t remember much from there, but from then on “White Winter Hymnal” would always remind me of summer.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>

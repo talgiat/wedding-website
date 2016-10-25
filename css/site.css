@@ -1,0 +1,33 @@
+* {
+  font-family: "Open Sans", sans-serif, "Helvetica", "Arial";
+}
+
+body {
+  background-color: #713137;
+  color: white;
+}
+
+.logo {
+  display: block;
+  margin: auto;
+}
+
+.soon, .reserve {
+  text-align: center;
+}
+
+a:link {
+    color:  #FFD700;
+}
+
+a:visited {
+    color: #DAA520;
+}
+
+a:hover {
+    color: #DAA520;
+}
+
+a:active {
+    color: #DAA520;
+}
