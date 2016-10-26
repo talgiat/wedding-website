@@ -1,9 +1,20 @@
+@import url(//db.onlinewebfonts.com/c/8f1c75e36ba4d8ab139713ae233acb09?family=Adobe+Devanagari);
+
+@font-face {font-family: "Adobe Devanagari";
+    src: url("//db.onlinewebfonts.com/t/8f1c75e36ba4d8ab139713ae233acb09.eot");
+    src: url("//db.onlinewebfonts.com/t/8f1c75e36ba4d8ab139713ae233acb09.eot?#iefix") format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/8f1c75e36ba4d8ab139713ae233acb09.woff2") format("woff2"),
+    url("//db.onlinewebfonts.com/t/8f1c75e36ba4d8ab139713ae233acb09.woff") format("woff"),
+    url("//db.onlinewebfonts.com/t/8f1c75e36ba4d8ab139713ae233acb09.ttf") format("truetype"),
+    url("//db.onlinewebfonts.com/t/8f1c75e36ba4d8ab139713ae233acb09.svg#Adobe Devanagari") format("svg");
+}
+
 * {
-  font-family: "Open Sans", sans-serif, "Helvetica", "Arial";
+  font-family: "Adobe Devanagari", sans-serif, "Helvetica", "Arial";
 }
 
 body {
-  background-color: #713137;
+  background-color: #803A38;
   color: white;
 }
 
