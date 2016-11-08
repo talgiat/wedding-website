@@ -1,0 +1,268 @@
+body {
+  background-color: rgb(19, 57, 62);
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+
+/* Style */
+
+#main article a {
+  color: rgb(235, 216, 173);
+  background-image: url('/images/background_gold.png');
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: 2.6rem 0;
+}
+
+#main > article a:hover {
+  background-image: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  color: black;
+  text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+}
+
+
+/* Layout */
+
+#container {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+header, footer {
+  display: block;
+  flex: 2 1 6.5%;
+}
+header {
+  border-bottom: 0.32rem solid white;
+  color: white;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+header > h1 {
+  font-family:"TradeGothic-Narrow", Arial, sans-serif;
+  text-transform:uppercase;
+  font-weight:normal;
+  flex: 1 1 50%;
+  text-align: center;
+  font-size: 2.8rem;
+  
+}
+footer {
+  border-top: 0.32rem solid white;
+}
+
+/* Home links content */
+
+#main {
+  border-bottom: 0.32rem solid white;
+  border-top: 0.32rem solid white;
+  background-color: rgb(19, 57, 62);
+  display: flex;
+  flex: 1 1 80%;
+  flex-flow: row;
+}
+  
+#main > article {
+  display: flex;
+  flex-flow: column;
+  flex: 3 1 50%;
+  align-items: center;
+}
+
+#main > article.left, #main > article.right {
+  display: flex;
+  flex-flow: column;
+  border-left: 0.32rem solid white;
+  border-right: 0.32rem solid white;
+}
+#main > article.left {
+  order: 2;
+}
+
+#main > article.right {
+  order: 3;
+}
+
+#main > article .top, #main > article .bottom {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+#main > article > .top, #main > article > .bottom {
+  flex: 1 1 50%;
+}
+#main > article .top {
+  border-bottom: 0.32rem solid white;
+}
+#main > article .bottom {
+  border-top: 0.32rem solid white;
+}
+
+#main > article > .bottom > .top {
+  flex: 1 1 67%;
+}
+#main > article > .bottom > .bottom {
+  flex-flow: row;
+  flex: 1 1 33%;
+}
+
+#main > article.left > .top {
+  flex-flow: row;
+}
+#main > article.left > .bottom {
+  flex-flow: column;
+}
+#main > article.right > .top {
+  flex-flow: column;
+}
+#main > article.right > .bottom {
+  flex-flow: row;
+}
+
+/* Links */
+
+#main > article a {
+  width: 100%;
+  line-height: 3rem;
+  text-transform: uppercase;
+}
+
+#main > article .about, #main > article .schedule, #main > article .rsvp {
+  flex: 1 1 100%;
+  text-align: center;
+  font-family:"TradeGothic-Narrow", Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.075rem;
+}
+
+#main > article .schedule {
+  font-family: "chrysler", Arial, sans-serif;
+}
+
+#main > article .accommodation, #main > article .transport {
+  height: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex: 1 1 50%;
+}
+
+#main > article .accommodation {
+  font-family:"TradeGothic-Narrow", Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.075rem;
+  border-right: 0.32rem solid white;
+}
+#main > article .transport {
+  font-family: "avantgarde", Times, serif;
+  font-size: 1.7rem;
+  font-weight: 300;
+  border-left: 0.32rem solid white;
+  background: url(/images/gold_circles_top.png) 0 0 repeat-x,
+              url(/images/gold_circles_bottom.png) 0 bottom repeat-x,
+              #13393E;
+}
+
+#main > article .checklist {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex: 1 1 33%;
+  font-family: "avantgarde", Times, serif;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  border-bottom: 0.32rem solid white;
+}
+
+#main > article .registry {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex: 1 1 67%;
+  font-family: "gatsbyflfregular", Times, serif;
+  font-size: 2.7rem;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  border-top: 0.32rem solid white;
+  background: url(/images/gold_leaf_1.png) 0 0 no-repeat,
+              url(/images/gold_leaf_2.png) right bottom no-repeat,#13393E;
+}
+
+#main > article.right .bottom {
+  background: url(/images/gold_triangles.png) 50% 47% no-repeat,#13393E;
+}
+
+#main > article .rsvp {
+  font-family: "chrysler", Arial, sans-serif;
+  font-size: 3.5rem;
+}
+
+
+
+/* Repsonsive */
+
+@media all and (max-width: 1050px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media all and (max-width: 950px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media all and (max-width: 900px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media all and (max-width: 850px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media all and (max-width: 800px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media all and (max-width: 750px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media all and (max-width: 640px) {
+  html {
+    font-size: 10px;
+  }
+  #main {
+    flex-direction: column;
+  }
+
+  #main > article, #main > aside {
+  /* Return them to document order */
+    order: 0;
+  }
+
+  #main > aside, header, footer {
+    min-height: 50px;
+    max-height: 50px;
+  }
+}
