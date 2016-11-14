@@ -1,0 +1,59 @@
+body {
+  background-color: #13393e;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+/* Style */
+#main article a {
+  color: #ebd8ad;
+  background-image: url("/images/background_gold.png");
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: 2.6rem 0; }
+
+#main > article a:hover {
+  background-image: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  color: black;
+  text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff; }
+
+/* Layout */
+#container {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+  width: 100vw; }
+
+header, footer {
+  flex: 2 1 5%; }
+
+header {
+  border-bottom: 0.32rem solid white;
+  color: white;
+  display: flex;
+  flex-flow: row;
+  align-items: center; }
+  header > h1 {
+    flex: 1 1 50%;
+    font-family: "TradeGothic-Narrow", Arial, sans-serif;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    text-align: center; }
+
+footer {
+  display: block;
+  border-top: 0.32rem solid white; }
+
+/* Home links content */
+#main {
+  border-bottom: 0.32rem solid white;
+  border-top: 0.32rem solid white;
+  background-color: #13393e;
+  display: flex;
+  flex: 1 1 80%;
+  flex-flow: row; }
+
+/*# sourceMappingURL=main.css.map */

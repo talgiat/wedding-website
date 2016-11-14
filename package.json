@@ -8,11 +8,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/talgiat/wedding-website.git"
+    "url": "git+https://github.com/talgiat/wedding-website.git"
   },
   "keywords": [
     "wedding"
   ],
   "author": "Tal Giat",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/talgiat/wedding-website/issues"
+  },
+  "homepage": "https://github.com/talgiat/wedding-website#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-watch": "~0.6.0",
+    "grunt-serve": "^0.1.6"
+  }
 }
