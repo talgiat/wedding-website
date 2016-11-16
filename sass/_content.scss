@@ -1,0 +1,131 @@
+article {
+  border-bottom: 0.32rem solid white;
+  border-top: 0.32rem solid white;
+  display: flex;
+  flex: 1 1 80%;
+  flex-flow: row;
+
+  /* Layout */
+
+  .left, .right {
+    display: flex;
+    flex: 1 1 50%;
+    flex-flow: column;
+    border-left: 0.32rem solid white;
+    border-right: 0.32rem solid white;
+  }
+
+  .top, .bottom {
+    display: flex;
+    flex: 1 1 50%;
+    flex-flow: column;
+    width: 100%;
+  }
+  .left {
+    > .bottom {
+      > .top {
+        flex-flow: row;
+        flex: 1 1 67%;
+        > .left {
+          border-left: none;
+        }
+        > .right {
+          border-right: none;
+        }
+      }
+      > .bottom {
+        flex: 1 1 33%;
+      }
+    }
+  }
+  .right {
+    > .top {
+      > .top {
+        flex: 1 1 33%;
+      }
+      > .bottom {
+        flex: 1 1 67%;
+      }
+    }
+  }
+  .top {
+    border-bottom: 0.32rem solid white;
+    flex-flow: column;
+  }
+  .bottom {
+    border-top: 0.32rem solid white;
+    > .top {
+      flex-flow: row;
+    }
+  }
+
+  /* Style */
+  a {
+    flex: 1 1 100%;
+    @extend %link;
+    @extend %link-with-background;
+    text-transform:uppercase;
+  }
+
+  a:hover {
+    @extend %link-hover;
+    color: white;
+  }
+
+  %content {
+    display: flex;
+    flex-flow: row;
+    flex: 1 1 100%;
+    align-items: center;
+    text-align: center;
+    line-height: 3.5rem;
+  }
+  %content-font-spacing {
+    letter-spacing: 0.075rem;
+  }
+  .rsvp {
+    @extend %content;
+    @extend %content-font-spacing;
+    @extend %font-crysler;
+    font-size: 3.5rem;
+    font-weight: bold;
+    background: url(/images/gold_triangles.png) 50% 47% no-repeat,#13393E;
+  }
+  .accommodation, .about {
+    @extend %content;
+    @extend %content-font-spacing;
+    @extend %font-tradegothic;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .transport {
+    @extend %content;
+    @extend %font-avantgarde;
+    font-size: 1.7rem;
+    font-weight: 300;
+  }
+  .checklist {
+    @extend %content;
+    @extend %font-avantgarde;
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+  .registry {
+    @extend %content;
+    @extend %font-gatsby;
+    font-size: 2.7rem;
+    font-style: italic;
+    font-weight: bold;
+    background: url(/images/floral_left_top.png) 0 0 no-repeat,
+                url(/images/floral_right_bottom.png) right bottom no-repeat,#13393E;
+  }
+  .schedule {
+    @extend %content;
+    @extend %content-font-spacing;
+    @extend %font-crysler;
+    font-size: 2rem;
+    font-weight: bold;
+    background: url(/images/gold_circles_top.png) 0 0 repeat-x,
+                url(/images/gold_circles_bottom.png) 0 bottom repeat-x,#13393E;
+  }
+}

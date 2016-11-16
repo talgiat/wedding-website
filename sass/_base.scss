@@ -1,0 +1,20 @@
+$background-color: rgb(19, 57, 62);
+$link-color: #ad8e47;
+
+%link {
+  color: $link-color;
+  text-decoration: none;
+}
+
+%link-with-background {
+  background-image: url('/images/background_gold.png');
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+%link-hover {
+  background-image: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: initial;
+  color: lighten($link-color,20%);
+}

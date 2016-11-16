@@ -1,0 +1,52 @@
+body {
+  background-color: $background-color;
+  box-sizing: border-box;
+}
+
+/* Layout */
+
+#container {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+/* Repsonsive */
+
+@media all and (max-width: 1050px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media all and (max-width: 950px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media all and (max-width: 900px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media all and (max-width: 850px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media all and (max-width: 800px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media all and (max-width: 750px) {
+  html {
+    font-size: 10px;
+  }
+}

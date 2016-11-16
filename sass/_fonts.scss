@@ -1,0 +1,23 @@
+@include font-face("chrysler", "/fonts/Chrysler-Condensed", normal, normal, eot woff ttf svg);
+@include font-face("gatsbyflfregular", "/fonts/gatsbyflf-webfont", normal, normal, eot woff ttf svg);
+@include font-face("avantgarde", "/fonts/ITCAvantGardeStd-Demi", bold, null, eot woff ttf svg);
+@include font-face("avantgarde", "/fonts/ITCAvantGardeStd-XLt", 300, null, eot woff ttf svg);
+@include font-face("avantgarde", "/fonts/ITCAvantGardeStd-Bk", normal, null, eot woff ttf svg);
+@include font-face("TradeGothic-Narrow", "/fonts/tradegothic-condeighteen", normal, normal, eot woff ttf svg);
+@include font-face("TradeGothic-Narrow", "/fonts/tradegothic-boldcondtwenty", bold, normal, eot woff ttf svg);
+@include font-face("TradeGothic", "/fonts/tradegothic", normal, normal, eot woff ttf svg);
+@include font-face("TradeGothic", "/fonts/tradegothic-light", 300, normal, eot woff ttf svg);
+@include font-face("TradeGothic", "/fonts/tradegothic-boldtwo", bold, normal, eot woff ttf svg);
+
+%font-tradegothic {
+  font-family:"TradeGothic-Narrow", Arial, sans-serif;
+}
+%font-avantgarde {
+  font-family: "avantgarde", Times, serif;
+}
+%font-crysler {
+  font-family: "chrysler", Arial, sans-serif;
+}
+%font-gatsby {
+  font-family: "gatsbyflfregular", Times, serif;
+}

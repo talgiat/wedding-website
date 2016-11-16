@@ -1,0 +1,119 @@
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+
+  &:target {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+$color-text: #968317;
+
+.popup {
+  @extend %font-tradegothic;
+  letter-spacing: 0.075rem;
+  font-weight: normal;
+  margin: 70px auto;
+  padding: 20px;
+  line-height: 1.3rem;
+  color: white;
+  background-color: $background-color;
+  border: solid 2px $color-text;
+  border-radius: 3px;
+  max-width: 40%;
+
+  #registry & {
+    max-width: 70%;
+  }
+  position: relative;
+  transition: all 5s ease-in-out;
+  h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .close {
+    position: absolute;
+    border: 1px solid $color-text;
+    padding: 3px;
+    top: 10px;
+    right: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: $color-text;
+    &:hover {
+      color: lighten($color-text,30%);
+    }
+  }
+  .content {
+    max-height: 80vh;
+    margin-right: 2rem;
+    overflow-x: auto;
+    overflow-y: scroll;
+    p {
+      #registry & {
+        margin-bottom: 1rem;
+      }
+    }
+    sup {
+      position: relative;
+      top: -.20em;
+      vertical-align: top;
+      font-size: 0.8em;
+    }
+    ul {
+      list-style: square outside;
+      margin-left: 1.5rem;
+      #schedule & {
+        list-style: none;
+        margin-left: 0;
+      }
+    }
+
+    li {
+      margin-top: 0.5rem;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+    a {
+      @extend %link;
+    }
+    a:hover {
+      @extend %link-hover;
+    }
+    .day {
+      color: $color-text;
+      margin: 1rem 0 0.2rem;
+      &:first-child {
+        margin-top: 0;
+      }
+
+    }
+    #questions {
+      margin-top: 0.7rem;
+      padding-left: 0.4rem;
+    }
+  }
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
