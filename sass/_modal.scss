@@ -37,7 +37,7 @@ $color-text: #968317;
     max-width: 70%;
   }
   position: relative;
-  transition: all 5s ease-in-out;
+  transition: all 1s ease-in-out;
   h2 {
     margin-top: 0;
     color: #333;
@@ -60,12 +60,17 @@ $color-text: #968317;
   .content {
     max-height: 80vh;
     margin-right: 2rem;
+    line-height: 1.4rem;
     overflow-x: auto;
-    overflow-y: scroll;
+    overflow-y: auto;
+    background-color: $background-color;
     p {
       #registry & {
         margin-bottom: 1rem;
       }
+    }
+    p.zola-content {
+      overflow-y: scroll;
     }
     sup {
       position: relative;
@@ -73,21 +78,11 @@ $color-text: #968317;
       vertical-align: top;
       font-size: 0.8em;
     }
-    ul {
+    ul.square-list {
       list-style: square outside;
       margin-left: 1.5rem;
-      #schedule & {
-        list-style: none;
-        margin-left: 0;
-      }
     }
 
-    li {
-      margin-top: 0.5rem;
-      &:first-child {
-        margin-top: 0;
-      }
-    }
     a {
       @extend %link;
     }
