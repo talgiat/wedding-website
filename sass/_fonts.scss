@@ -9,15 +9,19 @@
 @include font-face("TradeGothic", "/fonts/tradegothic-light", 300, normal, eot woff ttf svg);
 @include font-face("TradeGothic", "/fonts/tradegothic-boldtwo", bold, normal, eot woff ttf svg);
 
-%font-tradegothic {
+
+@mixin font-tradegothic2 {
+  font-family:"TradeGothic", Arial, sans-serif;
+}
+@mixin font-tradegothic {
   font-family:"TradeGothic-Narrow", Arial, sans-serif;
 }
-%font-avantgarde {
+@mixin font-avantgarde {
   font-family: "avantgarde", Times, serif;
 }
-%font-crysler {
+@mixin font-crysler {
   font-family: "chrysler", Arial, sans-serif;
 }
-%font-gatsby {
+@mixin font-gatsby {
   font-family: "gatsbyflfregular", Times, serif;
 }

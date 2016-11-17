@@ -4,9 +4,9 @@
   justify-content: center;
   position: fixed;
   top: 0;
-  bottom: 0;
   left: 0;
-  right: 0;
+  height: 100vh;
+  width: 100vw;
   background: rgba(0, 0, 0, 0.7);
   transition: opacity 250ms;
   visibility: hidden;
@@ -18,10 +18,8 @@
   }
 }
 
-$color-text: #968317;
-
 .popup {
-  @extend %font-tradegothic;
+  @include font-tradegothic;
   letter-spacing: 0.075rem;
   font-weight: normal;
   margin: 70px auto;
@@ -29,32 +27,23 @@ $color-text: #968317;
   line-height: 1.3rem;
   color: white;
   background-color: $background-color;
-  border: solid 2px $color-text;
+  border: solid 2px $link-color;
   border-radius: 3px;
   max-width: 40%;
-
-  #registry & {
-    max-width: 70%;
-  }
   position: relative;
   transition: all 1s ease-in-out;
-  h2 {
-    margin-top: 0;
-    color: #333;
-    font-family: Tahoma, Arial, sans-serif;
-  }
   .close {
     position: absolute;
-    border: 1px solid $color-text;
+    border: 1px solid $link-color;
     padding: 3px;
     top: 10px;
     right: 10px;
     font-size: 1.3rem;
     font-weight: bold;
     text-decoration: none;
-    color: $color-text;
+    color: $link-color;
     &:hover {
-      color: lighten($color-text,30%);
+      color: lighten($link-color,30%);
     }
   }
   .content {
@@ -64,12 +53,10 @@ $color-text: #968317;
     overflow-x: auto;
     overflow-y: auto;
     font-size: 1.1rem;
-    p {
-      #registry & {
-        margin-bottom: 1rem;
-      }
+    .registry {
+      margin-bottom: 1rem;
     }
-    p.zola-content {
+    .zola-content {
       overflow-y: scroll;
     }
     sup {
@@ -78,24 +65,23 @@ $color-text: #968317;
       vertical-align: top;
       font-size: 0.8em;
     }
-    ul.square-list {
+    ul.checklist {
       list-style: square outside;
       margin-left: 1.5rem;
     }
 
     a {
-      @extend %link;
+      @include link;
     }
     a:hover {
-      @extend %link-hover;
+      @include link-hover;
     }
     .day {
-      color: $color-text;
+      color: $link-color;
       margin: 1rem 0 0.2rem;
       &:first-child {
         margin-top: 0;
       }
-
     }
     #questions {
       margin-top: 0.7rem;
@@ -105,9 +91,6 @@ $color-text: #968317;
 }
 
 @media screen and (max-width: 700px){
-  .box{
-    width: 70%;
-  }
   .popup{
     width: 70%;
   }

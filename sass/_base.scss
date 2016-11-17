@@ -1,20 +1,25 @@
 $background-color: rgb(19, 57, 62);
-$link-color: #ad8e47;
+$link-color: #968317;
 
-%link {
+@mixin link {
   color: $link-color;
   text-decoration: none;
 }
 
-%link-with-background {
+@mixin link-with-background {
   background-image: url('/images/background_gold.png');
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-%link-hover {
+@mixin link-hover {
   background-image: none;
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
-  color: lighten($link-color,20%);
+  color: lighten($link-color, 20%);
+}
+
+hr {
+  border : 1px solid $link-color;
+  margin : 1rem 0;
 }
