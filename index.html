@@ -7,7 +7,6 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <title>Anokhee &amp; Tal's Indian Wedding - Neemrana 2017</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
   </head>
   <body>
@@ -65,139 +64,122 @@
       </article>
       <footer></footer>
 
-      <!-- Content in Modal -->
-
-      <div id="rsvp" class="overlay">
-        <div class="popup">
-          <a class="close" href="#">&times;</a>
-          <div class="content">
-            Email: <a href="mailto:rsvp@anokheetal.com">rsvp@anokheetal.com</a>
-            <br/>
-            WhatsApp: +61 400 280 667
-          </div>
-        </div>
-      </div>
-
-      <div id="accommodation" class="overlay">
-        <div class="popup">
-          <a class="close" href="#">&times;</a>
-          <div class="content">
-            <a href="mailto:pragati@neemranahotels.com" target="_top">Email Pragati</a> to secure your room at Neemrana Fort Palace.
-          </div>
-        </div>
-      </div>
-
-      <div id="about" class="overlay">
-        <div class="popup">
-          <a class="close" href="#">&times;</a>
-          <div class="content">
-            It was a rainy spring night in 2015 when Tal and Anokhee met on the dancefloor of a little known warehouse in Brooklyn. The rest is history.
-          </div>
-        </div>
-      </div>
-
-      <div id="transport" class="overlay">
-        <div class="popup">
-          <a class="close" href="#">&times;</a>
-          <div class="content">
-            <p>
-              Arrive in New Delhi by February 1<sup>st</sup>.
-              <br/>
-              Shuttle buses to Neemrana will depart from <a href="https://www.ihg.com/holidayinn/hotels/us/en/new-delhi/delap/hoteldetail" target="_blank">Holiday Inn Aerocity Delhi</a> at 9:30am Thursday, 2<sup>nd</sup> Feb, and return there on Saturday morning, 4<sup>th</sup> Feb.
-            </p>
-            <hr/>
-            <p>
-              Please <a href="mailto:shahgiat@gmail.com">let us know</a> if you are not planning to take the shuttle, or if you wish to arrange your own way to Neemrana.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div id="checklist" class="overlay">
-        <div class="popup">
-          <a class="close" href="#">&times;</a>
-          <div class="content">
-            <ul class="checklist">
-              <li>
-                Apply for your Indian tourist visa <a href="https://indianvisaonline.gov.in/visa/tvoa.html" target="_blank">online</a>
-              </li>
-              <li>Book flights</li>
-              <li>
-                Arrive at <a href="https://www.ihg.com/holidayinn/hotels/us/en/new-delhi/delap/hoteldetail" target="_blank">Holiday Inn Aerocity Delhi</a> by 9:30am on Thursday 2<sup>nd</sup> February
-              </li>
-            </ul>
-            <hr/>
-            <div id="questions">Contact us with ANY questions</div>
-            <ul class="checklist">
-              <li>
-                Naina: <a href="mailto:naina1502@hotmail.com">naina1502@hotmail.com</a>
-              </li>
-              <li>
-                Anokhee &amp; Tal: <a href="mailto:shahgiat@gmail.com">shahgiat@gmail.com</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div id="registry" class="overlay">
-        <div class="popup">
-          <a class="close" href="#">&times;</a>
-          <div class="content">
-            <p class="registry">
-              We kindly request no boxed gifts.
-              <br/>
-              For the more traditional gift givers among you we have set up a registry.
-            </p>
-            <p class="zola-content">
-              <a class="zola-registry-embed" 
-                 href="https://www.zola.com/registry/anokheeandtal"
-                 data-registry-key="anokheeandtal">
-                Our Zola Wedding Registry
-              </a>
-              <script>
-              !function(e,t,n){
-                var s,a=e.getElementsByTagName(t)[0];
-                e.getElementById(n)||(s=e.createElement(t),s.id=n,s.async=!0,s.src="https://widget.zola.com/js/widget.js",a.parentNode.insertBefore(s,a))
-              }(document,"script","zola-wjs");
-              </script>
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div id="schedule" class="overlay">
-        <div class="popup">
-          <a class="close" href="#">&times;</a>
-          <div class="content">
-            <div class="day">Thursday 2<sup>nd</sup> Feb</div>
-            <ul>
-              <li>9:30am Buses depart from <a href="https://www.ihg.com/holidayinn/hotels/us/en/new-delhi/delap/hoteldetail" target="_blank">Holiday Inn Aerocity Delhi</a></li>
-              <li>12:00pm Check in, lunch and refreshments</li>
-              <li>2:30pm Haldi ceremony for Anokhee &amp; Tal</li>
-              <li>3:00pm Henna</li>
-              <li>Siesta, relax and unwind</li>
-              <li>7:00pm Cocktails and Rajasthani Dance Performance</li>
-              <li>8:30pm Dinner</li>
-            </ul>
-
-            <div class="day">Friday 3<sup>rd</sup> February</div>
-            <p>Breakfast and lunch will be served. Guests are free to explore the fort and schedule any activities for the morning.</p>
-            <ul>
-              <li>2:00pm -3:30pm Turbans will be tied for all male guests at Hawa Mahal</li>
-              <li>4:00pm Wedding festivities commence</li>
-              <li>7:00pm onwards Dinner and Reception</li>
-            </ul>
-
-            <div class="day">Saturday 4<sup>th</sup> February</div>
-            <ul>
-              <li>8:00am Breakfast followed by checkout at 10:30am</li>
-              <li>11:00am Buses returning to Delhi.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <!-- Content -->
 
     </div>
+    
+    <!-- Templates -->
+    <script id="content-template" type="text/x-handlebars-template">
+      <div id="{{id}}" class="overlay">
+        <div class="popup">
+          <a class="close" href="#">&times;</a>
+          <div class="content">
+            {{{body}}}
+          </div>
+        </div>
+      </div>
+    </script>
+
+    <script id="mobile-content-template" type="text/x-handlebars-template">
+      <div id="{{id}}" class="content">
+      {{{body}}}
+      </div>
+    </script>
+
+    <script id="rsvp-template" type="text/x-handlebars-template">
+      Email: <a href="mailto:rsvp@anokheetal.com">rsvp@anokheetal.com</a>
+      <br/>
+      WhatsApp: +61 400 280 667
+    </script>
+
+    <script id="accommodation-template" type="text/x-handlebars-template">
+      <a href="mailto:pragati@neemranahotels.com" target="_top">Email Pragati</a> to secure your room at Neemrana Fort Palace.
+    </script>
+
+    <script id="transport-template" type="text/x-handlebars-template">
+      <p>
+        Arrive in New Delhi by February 1<sup>st</sup>.
+        <br/>
+        Shuttle buses to Neemrana will depart from <a href="https://www.ihg.com/holidayinn/hotels/us/en/new-delhi/delap/hoteldetail" target="_blank">Holiday Inn Aerocity Delhi</a> at 9:30am Thursday, 2<sup>nd</sup> Feb, and return there on Saturday morning, 4<sup>th</sup> Feb.
+      </p>
+      <hr/>
+      <p>
+        Please <a href="mailto:shahgiat@gmail.com">let us know</a> if you are not planning to take the shuttle, or if you wish to arrange your own way to Neemrana.
+      </p>
+    </script>
+
+    <script id="about-template" type="text/x-handlebars-template">
+      It was a rainy spring night in 2015 when Tal and Anokhee met on the dancefloor of a little known warehouse in Brooklyn. The rest is history.
+    </script>
+
+    <script id="checklist-template" type="text/x-handlebars-template">
+      <ul class="checklist">
+        <li>
+          Apply for your Indian tourist visa <a href="https://indianvisaonline.gov.in/visa/tvoa.html" target="_blank">online</a>
+        </li>
+        <li>Book flights</li>
+        <li>
+          Arrive at <a href="https://www.ihg.com/holidayinn/hotels/us/en/new-delhi/delap/hoteldetail" target="_blank">Holiday Inn Aerocity Delhi</a> by 9:30am on Thursday 2<sup>nd</sup> February
+        </li>
+      </ul>
+      <hr/>
+      <div id="questions">Contact us with ANY questions</div>
+      <ul class="checklist">
+        <li>
+          Naina: <a href="mailto:naina1502@hotmail.com">naina1502@hotmail.com</a>
+        </li>
+        <li>
+          Anokhee &amp; Tal: <a href="mailto:shahgiat@gmail.com">shahgiat@gmail.com</a>
+        </li>
+      </ul>
+    </script>
+
+    <script id="registry-template" type="text/x-handlebars-template">
+      <p class="registry">
+        We kindly request no boxed gifts.
+        <br/>
+        For the more traditional gift givers among you we have set up a registry.
+      </p>
+      <p>
+        <a class="zola-registry-embed" 
+           href="https://www.zola.com/registry/anokheeandtal"
+           data-registry-key="anokheeandtal">
+          Our Zola Wedding Registry
+        </a>
+      </p>
+    </script>
+
+    <script id="schedule-template" type="text/x-handlebars-template">
+      <div class="day">Thursday 2<sup>nd</sup> Feb</div>
+      <ul>
+        <li>9:30am Buses depart from <a href="https://www.ihg.com/holidayinn/hotels/us/en/new-delhi/delap/hoteldetail" target="_blank">Holiday Inn Aerocity Delhi</a></li>
+        <li>12:00pm Check in, lunch and refreshments</li>
+        <li>2:30pm Haldi ceremony for Anokhee &amp; Tal</li>
+        <li>3:00pm Henna</li>
+        <li>Siesta, relax and unwind</li>
+        <li>7:00pm Cocktails and Rajasthani Dance Performance</li>
+        <li>8:30pm Dinner</li>
+      </ul>
+      <div class="day">Friday 3<sup>rd</sup> February</div>
+      <p>
+        Breakfast and lunch will be served. Guests are free to explore the fort and schedule any activities for the morning.
+      </p>
+      <ul>
+        <li>2:00pm -3:30pm Turbans will be tied for all male guests at Hawa Mahal</li>
+        <li>4:00pm Wedding festivities commence</li>
+        <li>7:00pm onwards Dinner and Reception</li>
+      </ul>
+      <div class="day">Saturday 4<sup>th</sup> February</div>
+      <ul>
+        <li>8:00am Breakfast followed by checkout at 10:30am</li>
+        <li>11:00am Buses returning to Delhi.</li>
+      </ul>
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+      window.onload=init;
+    </script>
   </body>
 </html>
