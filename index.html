@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
+    <meta name="Description" content="Anokhee Shah and Tal Giat's Indian Wedding, Date:Febuary 2nd and 3rd 2017,
+    Location: Neemrana Fort, Rajasthan India">
     <title>Anokhee &amp; Tal's Indian Wedding - Neemrana 2017</title>
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
   </head>
-  <body>
+  <body class="desktop">
     <div id="container">
       <header>
         <h1>Anokhee &amp; Tal</h1>
@@ -19,25 +21,25 @@
         <div class="left">
           <div class="top">
             <p class="rsvp">
-              <a href="#rsvp">rsvp</a>
+              <a onclick="return handle_click(event);" href="#rsvp">rsvp</a>
             </p>
           </div>
           <div class="bottom">
             <div class="top">
               <div class="left">
                 <p class="accommodation">
-                  <a href="#accommodation">accommodation</a>
+                  <a onclick="return handle_click(event);" href="#accommodation">accommodation</a>
                 </p>
               </div>
               <div class="right">
                 <p class="transport">
-                  <a href="#transport">transport</a>
+                  <a onclick="return handle_click(event);" href="#transport">transport</a>
                 </p>
               </div>
             </div>
             <div class="bottom">
               <p class="about">
-                <a href="#about">about</a>
+                <a onclick="return handle_click(event);" href="#about">about</a>
               </p>
             </div>
           </div>
@@ -46,57 +48,62 @@
           <div class="top">
             <div class="top">
               <p class="checklist">
-                <a href="#checklist">checklist &amp; contact</a>
+                <a onclick="return handle_click(event);" href="#checklist">checklist &amp; contact</a>
               </p>
             </div>
             <div class="bottom">
               <p class="registry">
-                <a href="#registry">registry</a>
+                <a onclick="return handle_click(event);" href="#registry">registry</a>
               </p>
             </div>
           </div>
           <div class="bottom">
             <p class="schedule">
-              <a href="#schedule">schedule</a>
+              <a onclick="return handle_click(event);" href="#schedule">schedule</a>
             </p>
           </div>
         </div>
       </article>
       <footer></footer>
-
-      <!-- Content -->
-
     </div>
+
+    <div id='container-mobile'>
+      <div>Anokhee</div>
+      <div>&amp;</div>
+      <div>Tal</div>
+      <div>February 2<sup>nd</sup> &amp; 3<sup>rd</sup> 2017</div>
+    </div>
+      
     
     <!-- Templates -->
-    <script id="content-template" type="text/x-handlebars-template">
-      <div id="{{id}}" class="overlay">
+    <script id="content-template" type="text/template">
+      <div id="{id}" class="overlay">
         <div class="popup">
           <a class="close" href="#">&times;</a>
           <div class="content">
-            {{{body}}}
+            {body}
           </div>
         </div>
       </div>
     </script>
 
-    <script id="mobile-content-template" type="text/x-handlebars-template">
-      <div id="{{id}}" class="content">
-      {{{body}}}
+    <script id="mobile-content-template" type="text/template">
+      <div id="{id}" class="content">
+      {body}
       </div>
     </script>
 
-    <script id="rsvp-template" type="text/x-handlebars-template">
+    <script id="rsvp-template" type="text/template">
       Email: <a href="mailto:rsvp@anokheetal.com">rsvp@anokheetal.com</a>
       <br/>
       WhatsApp: +61 400 280 667
     </script>
 
-    <script id="accommodation-template" type="text/x-handlebars-template">
+    <script id="accommodation-template" type="text/template">
       <a href="mailto:pragati@neemranahotels.com" target="_top">Email Pragati</a> to secure your room at Neemrana Fort Palace.
     </script>
 
-    <script id="transport-template" type="text/x-handlebars-template">
+    <script id="transport-template" type="text/template">
       <p>
         Arrive in New Delhi by February 1<sup>st</sup>.
         <br/>
@@ -108,11 +115,11 @@
       </p>
     </script>
 
-    <script id="about-template" type="text/x-handlebars-template">
-      It was a rainy spring night in 2015 when Tal and Anokhee met on the dancefloor of a little known warehouse in Brooklyn. The rest is history.
+    <script id="about-template" type="text/template">
+      <p>It was a rainy spring night in 2015 when Tal and Anokhee met on the dancefloor of a little known warehouse in Brooklyn. The rest is history.</p>
     </script>
 
-    <script id="checklist-template" type="text/x-handlebars-template">
+    <script id="checklist-template" type="text/template">
       <ul class="checklist">
         <li>
           Apply for your Indian tourist visa <a href="https://indianvisaonline.gov.in/visa/tvoa.html" target="_blank">online</a>
@@ -134,7 +141,7 @@
       </ul>
     </script>
 
-    <script id="registry-template" type="text/x-handlebars-template">
+    <script id="registry-template" type="text/template">
       <p class="registry">
         We kindly request no boxed gifts.
         <br/>
@@ -149,7 +156,7 @@
       </p>
     </script>
 
-    <script id="schedule-template" type="text/x-handlebars-template">
+    <script id="schedule-template" type="text/template">
       <div class="day">Thursday 2<sup>nd</sup> Feb</div>
       <ul>
         <li>9:30am Buses depart from <a href="https://www.ihg.com/holidayinn/hotels/us/en/new-delhi/delap/hoteldetail" target="_blank">Holiday Inn Aerocity Delhi</a></li>
@@ -176,7 +183,6 @@
       </ul>
     </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
     <script src="/js/main.js"></script>
     <script>
       window.onload=init;

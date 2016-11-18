@@ -27,10 +27,21 @@ module.exports = function(grunt) {
         src: 'css/*.css'
       }
     },
+    babel: {
+      options: {
+        sourceMap: true,
+        presets: ['es2015']
+      },
+      dist: {
+        files: {
+          'js/main.js': 'scripts/main.js'
+        }
+      }
+    },
     watch: {
       sass: {
-        files: [ 'sass/*.scss' ],
-        tasks: [ 'sass', 'postcss:dist' ]
+        files: [ 'sass/*.scss', 'scripts/*.js' ],
+        tasks: [ 'sass', 'postcss:dist', 'babel' ]
       }
     }
   });
@@ -40,8 +51,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-serve');
   grunt.loadNpmTasks('grunt-postcss');
+  grunt.loadNpmTasks('grunt-babel');
 
   // Default task(s).
-  grunt.registerTask('default', ['sass', 'postcss:dist']);
+  grunt.registerTask('default', ['sass', 'postcss:dist', 'babel']);
 
 };
