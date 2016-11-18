@@ -1,8 +1,3 @@
-body {
-  background-color: $background-color;
-  box-sizing: border-box;
-}
-
 /* Layout */
 
 #container {
@@ -89,24 +84,13 @@ body {
     color: white;
   }
 
-  @mixin honey-column {
-    display: flex;
-    flex-flow: row;
-    flex: 1 1 100%;
-    align-items: center;
-    text-align: center;
-    line-height: 3.5rem;
-  }
-  @mixin honey-column-font-spacing {
-    letter-spacing: 0.075rem;
-  }
   .rsvp {
     @include honey-column;
     @include honey-column-font-spacing;
     @include font-crysler;
     font-size: 3.5rem;
     font-weight: bold;
-    background: url(/images/gold_triangles.png) 50% 47% no-repeat,#13393E;
+    background: url(/images/gold_triangles.png) 50% 47% no-repeat,$background-color;
   }
   .accommodation, .about {
     @include honey-column;
@@ -134,7 +118,7 @@ body {
     font-style: italic;
     font-weight: bold;
     background: url(/images/floral_left_top.png) 0 0 no-repeat,
-                url(/images/floral_right_bottom.png) right bottom no-repeat,#13393E;
+                url(/images/floral_right_bottom.png) right bottom no-repeat,$background-color;
   }
   .schedule {
     @include honey-column;
@@ -143,53 +127,44 @@ body {
     font-size: 2rem;
     font-weight: bold;
     background: url(/images/gold_circles_top.png) 0 0 repeat-x,
-                url(/images/gold_circles_bottom.png) 0 bottom repeat-x,#13393E;
-  }
-}
-
-#container-mobile {
-  body.mobile & {
-    display: block;
-  }
-  display: none;
-  color: white;
-  font-size: 3rem;
+                url(/images/gold_circles_bottom.png) 0 bottom repeat-x,$background-color;
+  } 
 }
 
 /* Repsonsive */
 
 @media all and (max-width: 1050px) {
-  html {
+  #container {
     font-size: 15px;
   }
 }
 
 @media all and (max-width: 950px) {
-  html {
+  #container {
     font-size: 14px;
   }
 }
 
 @media all and (max-width: 900px) {
-  html {
+  #container {
     font-size: 13px;
   }
 }
 
 @media all and (max-width: 850px) {
-  html {
+  #container {
     font-size: 12px;
   }
 }
 
 @media all and (max-width: 800px) {
-  html {
+  #container {
     font-size: 11px;
   }
 }
 
 @media all and (max-width: 750px) {
-  html {
+  #container {
     font-size: 10px;
   }
 }

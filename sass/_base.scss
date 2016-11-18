@@ -1,8 +1,14 @@
 $background-color: rgb(19, 57, 62);
-$link-color: #968317;
+$highlight-color: #968317;
+
+@mixin flex-centered ($flow: row){
+  display: flex;
+  flex-flow: $flow;
+  align-items: center;
+}
 
 @mixin link {
-  color: $link-color;
+  color: $highlight-color;
   text-decoration: none;
 }
 
@@ -16,10 +22,25 @@ $link-color: #968317;
   background-image: none;
   -webkit-background-clip: initial;
   -webkit-text-fill-color: initial;
-  color: lighten($link-color, 20%);
+  color: lighten($highlight-color, 20%);
+}
+
+@mixin honey-column {
+  @include flex-centered(row);
+  flex: 1 1 100%;
+  text-align: center;
+  line-height: 3.5rem;
+}
+@mixin honey-column-font-spacing {
+  letter-spacing: 0.075rem;
+}
+
+body {
+  background-color: $background-color;
+  box-sizing: border-box;
 }
 
 hr {
-  border : 1px solid $link-color;
+  border : 1px solid $highlight-color;
   margin : 1rem 0;
 }

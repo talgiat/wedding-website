@@ -11,7 +11,7 @@
     <title>Anokhee &amp; Tal's Indian Wedding - Neemrana 2017</title>
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
   </head>
-  <body class="desktop">
+  <body>
     <div id="container">
       <header>
         <h1>Anokhee &amp; Tal</h1>
@@ -68,13 +68,37 @@
     </div>
 
     <div id='container-mobile'>
-      <div>Anokhee</div>
-      <div>&amp;</div>
-      <div>Tal</div>
-      <div>February 2<sup>nd</sup> &amp; 3<sup>rd</sup> 2017</div>
+      <ul class="menu-mobile">
+        <li>Home</li>
+        <li>Rsvp</li>
+        <li>Accommodation</li>
+        <li>Transport</li>
+        <li>About</li>
+        <li>Checklist</li>
+        <li>Registry</li>
+        <li>Schedule</li>
+      </ul>
+      <div class="main-mobile">
+        <nav>
+          <button class="hamburger">
+            <!-- hamburger 'patties' -->
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <span>selection</span>
+        </nav>
+        <article class="content-mobile">
+          <div class="home">
+            <div class="names">Anokhee</div>
+            <div class="names">&amp;</div>
+            <div class="names">Tal</div>
+            <div class="date">February 2<sup>nd</sup> &amp; 3<sup>rd</sup> 2017</div>
+          <div>
+        </article>
+      </div>
     </div>
-      
-    
+
     <!-- Templates -->
     <script id="content-template" type="text/template">
       <div id="{id}" class="overlay">
@@ -88,7 +112,7 @@
     </script>
 
     <script id="mobile-content-template" type="text/template">
-      <div id="{id}" class="content">
+      <div id="{id}" class="mobile-content">
       {body}
       </div>
     </script>
@@ -121,10 +145,10 @@
 
     <script id="checklist-template" type="text/template">
       <ul class="checklist">
+        <li>Book flights</li>
         <li>
           Apply for your Indian tourist visa <a href="https://indianvisaonline.gov.in/visa/tvoa.html" target="_blank">online</a>
         </li>
-        <li>Book flights</li>
         <li>
           Arrive at <a href="https://www.ihg.com/holidayinn/hotels/us/en/new-delhi/delap/hoteldetail" target="_blank">Holiday Inn Aerocity Delhi</a> by 9:30am on Thursday 2<sup>nd</sup> February
         </li>
@@ -143,8 +167,7 @@
 
     <script id="registry-template" type="text/template">
       <p class="registry">
-        We kindly request no boxed gifts.
-        <br/>
+        The best present we can hope for is your presence at our wedding.
         For the more traditional gift givers among you we have set up a registry.
       </p>
       <p>
@@ -157,29 +180,29 @@
     </script>
 
     <script id="schedule-template" type="text/template">
-      <div class="day">Thursday 2<sup>nd</sup> Feb</div>
+      <div class="day">Thursday 2<sup>nd</sup> February</div>
       <ul>
-        <li>9:30am Buses depart from <a href="https://www.ihg.com/holidayinn/hotels/us/en/new-delhi/delap/hoteldetail" target="_blank">Holiday Inn Aerocity Delhi</a></li>
-        <li>12:00pm Check in, lunch and refreshments</li>
-        <li>2:30pm Haldi ceremony for Anokhee &amp; Tal</li>
-        <li>3:00pm Henna</li>
-        <li>Siesta, relax and unwind</li>
-        <li>7:00pm Cocktails and Rajasthani Dance Performance</li>
-        <li>8:30pm Dinner</li>
+        <li><span>9:30am</span> Buses depart from <a href="https://www.ihg.com/holidayinn/hotels/us/en/new-delhi/delap/hoteldetail" target="_blank">Holiday Inn Aerocity Delhi</a></li>
+        <li><span>12:00pm</span> Arrival &amp; lunch</li>
+        <li><span>2:30pm</span> Haldi ceremony for Anokhee &amp; Tal</li>
+        <li><span>3:00pm</span> Henna</li>
+        <li>Relax &amp; refresh</li>
+        <li><span>7:00pm</span> Cocktails &amp; Rajasthani Dance Performance</li>
+        <li><span>8:30pm</span> Dinner</li>
       </ul>
       <div class="day">Friday 3<sup>rd</sup> February</div>
       <p>
-        Breakfast and lunch will be served. Guests are free to explore the fort and schedule any activities for the morning.
+        Breakfast and lunch will be served. Guests are free to explore the fort and schedule activities for the morning.
       </p>
-      <ul>
-        <li>2:00pm -3:30pm Turbans will be tied for all male guests at Hawa Mahal</li>
+      <ul class="friday">
+        <li>2:00pm Turbans to be tied for men </li>
         <li>4:00pm Wedding festivities commence</li>
-        <li>7:00pm onwards Dinner and Reception</li>
+        <li>7:00pm Reception &amp; Dinner</li>
       </ul>
       <div class="day">Saturday 4<sup>th</sup> February</div>
       <ul>
-        <li>8:00am Breakfast followed by checkout at 10:30am</li>
-        <li>11:00am Buses returning to Delhi.</li>
+        <li>8:30am Breakfast followed by checkout at 10:30am</li>
+        <li>11:00am Buses returning to Delhi</li>
       </ul>
     </script>
 

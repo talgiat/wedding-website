@@ -44,18 +44,17 @@ const init = () => {
   if (window.location.hostname !== 'localhost') {
     invoke_ga();
   }
-  let is_mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  //set_body_class(is_mobile);
+  let is_mobile = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && false;
+  set_body_class(is_mobile);
 
-  let container = document.getElementById('container');
-  // let content_t =  get_template(is_mobile ? 'mobile-content-template' : 'content-template');
-  let content_t =  get_template('content-template');
-  ['rsvp', 'accommodation', 'transport', 'about', 'checklist', 'registry', 'schedule'].forEach((id) => {
-    let template = get_template(id + '-template');
-    let html = eval_template(content_t, {id: id, body: eval_template(template,{})});
-    container.insertAdjacentHTML('beforeend', html);
-  });
   if (!is_mobile) {
+    let container = document.getElementById('container');
+    let content_t =  get_template('content-template');
+    ['rsvp', 'accommodation', 'transport', 'about', 'checklist', 'registry', 'schedule'].forEach((id) => {
+      let template = get_template(id + '-template');
+      let html = eval_template(content_t, {id: id, body: eval_template(template,{})});
+      container.insertAdjacentHTML('beforeend', html);
+    });
     zola_widget(document,"script","zola-wjs");
   }
 }

@@ -52,19 +52,20 @@ var init = function init() {
   if (window.location.hostname !== 'localhost') {
     invoke_ga();
   }
-  var is_mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  //set_body_class(is_mobile);
+  var is_mobile = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && false;
+  set_body_class(is_mobile);
 
-  var container = document.getElementById('container');
-  // let content_t =  get_template(is_mobile ? 'mobile-content-template' : 'content-template');
-  var content_t = get_template('content-template');
-  ['rsvp', 'accommodation', 'transport', 'about', 'checklist', 'registry', 'schedule'].forEach(function (id) {
-    var template = get_template(id + '-template');
-    var html = eval_template(content_t, { id: id, body: eval_template(template, {}) });
-    container.insertAdjacentHTML('beforeend', html);
-  });
   if (!is_mobile) {
-    zola_widget(document, "script", "zola-wjs");
+    (function () {
+      var container = document.getElementById('container');
+      var content_t = get_template('content-template');
+      ['rsvp', 'accommodation', 'transport', 'about', 'checklist', 'registry', 'schedule'].forEach(function (id) {
+        var template = get_template(id + '-template');
+        var html = eval_template(content_t, { id: id, body: eval_template(template, {}) });
+        container.insertAdjacentHTML('beforeend', html);
+      });
+      zola_widget(document, "script", "zola-wjs");
+    })();
   }
 };
 //# sourceMappingURL=main.js.map
