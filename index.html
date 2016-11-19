@@ -21,25 +21,25 @@
         <div class="left">
           <div class="top">
             <p class="rsvp">
-              <a onclick="return handle_click(event);" href="#rsvp">rsvp</a>
+              <a onclick="return reportPageview(event);" href="#rsvp">rsvp</a>
             </p>
           </div>
           <div class="bottom">
             <div class="top">
               <div class="left">
                 <p class="accommodation">
-                  <a onclick="return handle_click(event);" href="#accommodation">accommodation</a>
+                  <a onclick="return reportPageview(event);" href="#accommodation">accommodation</a>
                 </p>
               </div>
               <div class="right">
                 <p class="transport">
-                  <a onclick="return handle_click(event);" href="#transport">transport</a>
+                  <a onclick="return reportPageview(event);" href="#transport">transport</a>
                 </p>
               </div>
             </div>
             <div class="bottom">
               <p class="about">
-                <a onclick="return handle_click(event);" href="#about">about</a>
+                <a onclick="return reportPageview(event);" href="#about">about</a>
               </p>
             </div>
           </div>
@@ -48,18 +48,18 @@
           <div class="top">
             <div class="top">
               <p class="checklist">
-                <a onclick="return handle_click(event);" href="#checklist">checklist &amp; contact</a>
+                <a onclick="return reportPageview(event);" href="#checklist">checklist &amp; contact</a>
               </p>
             </div>
             <div class="bottom">
               <p class="registry">
-                <a onclick="return handle_click(event);" href="#registry">registry</a>
+                <a onclick="return reportPageview(event);" href="#registry">registry</a>
               </p>
             </div>
           </div>
           <div class="bottom">
             <p class="schedule">
-              <a onclick="return handle_click(event);" href="#schedule">schedule</a>
+              <a onclick="return reportPageview(event);" href="#schedule">schedule</a>
             </p>
           </div>
         </div>
@@ -69,18 +69,18 @@
 
     <div id='container-mobile'>
       <ul class="menu-mobile">
-        <li>Home</li>
-        <li>Rsvp</li>
-        <li>Accommodation</li>
-        <li>Transport</li>
-        <li>About</li>
-        <li>Checklist</li>
-        <li>Registry</li>
-        <li>Schedule</li>
+        <li onclick="return menuEntryClick(event);">Home</li>
+        <li onclick="return menuEntryClick(event);">Rsvp</li>
+        <li onclick="return menuEntryClick(event);">Accommodation</li>
+        <li onclick="return menuEntryClick(event);">Transport</li>
+        <li onclick="return menuEntryClick(event);">About</li>
+        <li onclick="return menuEntryClick(event);">Checklist</li>
+        <li onclick="return menuEntryClick(event);">Registry</li>
+        <li onclick="return menuEntryClick(event);">Schedule</li>
       </ul>
       <div class="main-mobile">
         <nav>
-          <button class="hamburger">
+          <button onclick="return toggleMenu(event);" class="hamburger">
             <!-- hamburger 'patties' -->
             <span></span>
             <span></span>
@@ -88,14 +88,7 @@
           </button>
           <span>selection</span>
         </nav>
-        <article class="content-mobile">
-          <div class="home">
-            <div class="names">Anokhee</div>
-            <div class="names">&amp;</div>
-            <div class="names">Tal</div>
-            <div class="date">February 2<sup>nd</sup> &amp; 3<sup>rd</sup> 2017</div>
-          <div>
-        </article>
+        <article class="content-mobile"></article>
       </div>
     </div>
 
@@ -111,10 +104,13 @@
       </div>
     </script>
 
-    <script id="mobile-content-template" type="text/template">
-      <div id="{id}" class="mobile-content">
-      {body}
-      </div>
+    <script id="home-template" type="text/template">
+      <div class="home">
+        <div class="names">Anokhee</div>
+        <div class="names">&amp;</div>
+        <div class="names">Tal</div>
+        <div class="date">February 2<sup>nd</sup> &amp; 3<sup>rd</sup> 2017</div>
+      <div>
     </script>
 
     <script id="rsvp-template" type="text/template">

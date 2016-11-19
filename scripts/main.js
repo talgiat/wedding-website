@@ -1,12 +1,18 @@
-const eval_template = (src,ctx) =>  src.replace(/{(\w+)}/g, (_,k) => ctx[k] || "");
-const get_template = id => document.getElementById(id).innerHTML.trim();
+const $ = document.getElementById.bind(document);
+const evalTemplate = (src,ctx) =>  src.replace(/{(\w+)}/g, (_,k) => ctx[k] || "");
+const getTemplate = id => $(id).innerHTML.trim();
 
-const zola_widget = (e,t,n) => {
+const zolaWidget = (e,t,n) => {
   let s,a=e.getElementsByTagName(t)[0];
   e.getElementById(n)||(s=e.createElement(t),s.id=n,s.async=!0,s.src="https://widget.zola.com/js/widget.js",a.parentNode.insertBefore(s,a))
 };
 
-const handle_click = e => {
+const getHTMLForTemplate = (id,context) => {
+  let template = getTemplate(id + '-template');
+  return evalTemplate(template,context);
+};
+
+const reportPageview = e => {
   if (e.target.href) {
     let parts = e.target.href.split('#');
     if (parts.length > 1) {
@@ -17,9 +23,31 @@ const handle_click = e => {
       catch(e) {} // fail silently (there is no other way to check if ga is not on)
     }
   }
-}
+};
 
-const invoke_ga = () => {
+const setMobileContentTo = template_id => {
+  let content_mobile = document.querySelector('.content-mobile');
+  let classes = 'content-mobile ' + (template_id == 'home' ? 'home' : 'info');
+  content_mobile.className = classes;
+  content_mobile.innerHTML = getHTMLForTemplate(template_id,{});
+};
+
+const menuEntryClick = e => {
+  let id = e.target.innerHTML.trim().toLowerCase();
+  let menu = $('container-mobile');
+  menu.classList.remove('menu-open');
+  setMobileContentTo(id);
+  // if (id === 'registry') {
+  //   zolaWidget(document, "script", "zola-wjs");
+  // }
+};
+
+const toggleMenu = e => {
+  let menu = $('container-mobile');
+  menu.classList.toggle('menu-open');
+};
+
+const invokeGA = () => {
   (function(i,s,o,g,r,a,m){
     i['GoogleAnalyticsObject']=r;
     i[r]=i[r]||function(){
@@ -33,28 +61,29 @@ const invoke_ga = () => {
 
   ga('create', 'UA-87609155-1', 'auto');
   ga('send', 'pageview', '/');
-}
+};
 
-const set_body_class = is_mobile => {
+const setBodyClass = is_mobile => {
   let body = document.querySelector('body');
-  body.className = is_mobile ? 'mobile' : 'desktop';
-}
+  body.classList.add(is_mobile ? 'mobile' : 'desktop');
+};
 
 const init = () => {
   if (window.location.hostname !== 'localhost') {
-    invoke_ga();
+    invokeGA();
   }
-  let is_mobile = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && false;
-  set_body_class(is_mobile);
+  let is_mobile = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  setBodyClass(is_mobile);
 
   if (!is_mobile) {
-    let container = document.getElementById('container');
-    let content_t =  get_template('content-template');
-    ['rsvp', 'accommodation', 'transport', 'about', 'checklist', 'registry', 'schedule'].forEach((id) => {
-      let template = get_template(id + '-template');
-      let html = eval_template(content_t, {id: id, body: eval_template(template,{})});
+    let container = $('container');
+    let content_t =  getTemplate('content-template');
+    ['rsvp', 'accommodation', 'transport', 'about', 'checklist', 'registry', 'schedule'].forEach(id => {
+      let html = evalTemplate(content_t, {id: id, body: getHTMLForTemplate(id,{id: id})});
       container.insertAdjacentHTML('beforeend', html);
     });
-    zola_widget(document,"script","zola-wjs");
+    zolaWidget(document, "script", "zola-wjs");
+  } else {
+    setMobileContentTo('home');
   }
-}
+};
